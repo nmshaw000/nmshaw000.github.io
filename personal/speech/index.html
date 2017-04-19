@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.css" />
   <link rel="stylesheet" type="text/css" href="https://nmshaw000.github.io/./theme/css/style.css">
+
+  <!-- Facebook 留言管理員 ID -->
+  <meta property="fb:admins" content="100000463516943"/>
+  <meta property="fb:admins" content="100011192288460"/>
 </head>
 <body>
 
@@ -114,7 +118,18 @@
         <a class="nav-item" href="https://nmshaw000.github.io/en/">English</a>
     </div>
   </div>
-</nav><section class="hero is-primary">
+</nav><!-- Facebook留言JavaScript SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- End of Facebook留言JavaScript SDK -->
+
+<section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -267,6 +282,15 @@
   </aside></footer>
   </div>
 </section>
+
+<!-- Facebook 留言位置 -->
+<section class="section">
+<div class="container">
+<div class="fb-comments" data-width="100%" data-numposts="5"></div>
+</div>
+</section>
+<!-- End of Facebook 留言位置 -->
+
 </div>
 </div>
 
